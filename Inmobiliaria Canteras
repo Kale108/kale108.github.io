@@ -1,0 +1,88 @@
+index.html 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliaria Canteras | Encuentra tu espacio ideal</title>
+    <style>
+        :root {
+            --primary: #1e293b; /* Tono pizarra elegante */
+            --accent: #d97706; /* Tono ámbar/dorado para botones */
+            --light: #f8fafc;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--primary);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h2 {
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        main {
+            flex: 1;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero-card {
+            background: white;
+            padding: 50px 30px;
+            border-radius: 8px;
+            border-top: 4px solid var(--accent);
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        p { color: #475569; font-size: 1.2rem; line-height: 1.6; max-width: 600px; margin: 0 auto 30px auto; }
+        
+        .btn-contacto {
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .btn-contacto:hover { background-color: #b45309; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>CANTERAS</h2>
+        <span style="color: #64748b; font-size: 0.9rem;">Bienes Raíces Exclusivos</span>
+    </header>
+
+    <main>
+        <div class="hero-card">
+            <h1>Propiedades que inspiran</h1>
+            <p>Descubre el portafolio de Inmobiliaria Canteras. Nuestro agente digital está disponible 24/7 para enviarte fichas técnicas, agendar visitas o precalificar tu perfil.</p>
+            <a href="#" class="btn-contacto" onclick="alert('Aquí puedes hacer que el botón abra el chat directamente')">Hablar con un asesor</a>
+        </div>
+    </main>
+
+    <script>
+        // Aquí insertaremos el widget de tu agente de IA.
+        // Si el agente captura datos (nombre, presupuesto, zona), los puede mandar directamente a tu CRM o Google Sheets.
+        console.log("Sistema de captación inmobiliaria listo.");
+    </script>
+
+</body>
+</html>
