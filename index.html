@@ -4,85 +4,115 @@ index.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inmobiliaria Canteras | Encuentra tu espacio ideal</title>
+    <title>Inmobiliaria Canteras | Bienes Raíces</title>
     <style>
-        :root {
-            --primary: #1e293b; /* Tono pizarra elegante */
-            --accent: #d97706; /* Tono ámbar/dorado para botones */
-            --light: #f8fafc;
-        }
+        /* Estilos básicos para que se vea limpio y profesional desde ya */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--light);
-            color: var(--primary);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            background-color: #f4f6f9;
+            color: #333;
         }
         header {
-            background-color: white;
-            padding: 1.5rem 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            background-color: #ffffff;
+            padding: 20px 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        header h2 {
-            margin: 0;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a365d; /* Azul premium */
         }
-        main {
-            flex: 1;
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+        }
+        .hero {
+            background-color: #1a365d;
+            color: white;
+            padding: 100px 40px;
             text-align: center;
         }
-        .hero-card {
-            background: white;
-            padding: 50px 30px;
-            border-radius: 8px;
-            border-top: 4px solid var(--accent);
-            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
         }
-        h1 { font-size: 2.5rem; margin-bottom: 15px; }
-        p { color: #475569; font-size: 1.2rem; line-height: 1.6; max-width: 600px; margin: 0 auto 30px auto; }
-        
-        .btn-contacto {
-            background-color: var(--accent);
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            color: #e2e8f0;
+        }
+        .btn-principal {
+            background-color: #d69e2e; /* Dorado/Arena corporativo */
             color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 4px;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
             font-weight: bold;
-            transition: background 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
         }
-        .btn-contacto:hover { background-color: #b45309; }
+        .btn-principal:hover {
+            background-color: #b7791f;
+        }
+        .contenido {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #2d3748;
+            color: #a0aec0;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Encabezado / Navegación -->
     <header>
-        <h2>CANTERAS</h2>
-        <span style="color: #64748b; font-size: 0.9rem;">Bienes Raíces Exclusivos</span>
+        <div class="logo">Inmobiliaria Canteras</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#propiedades">Propiedades</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
     </header>
 
-    <main>
-        <div class="hero-card">
-            <h1>Propiedades que inspiran</h1>
-            <p>Descubre el portafolio de Inmobiliaria Canteras. Nuestro agente digital está disponible 24/7 para enviarte fichas técnicas, agendar visitas o precalificar tu perfil.</p>
-            <a href="#" class="btn-contacto" onclick= Hablar con un asesor</a>
-        </div>
+    <!-- Sección Principal (Hero) -->
+    <section class="hero" id="inicio">
+        <h1>Encuentra tu próximo espacio ideal</h1>
+        <p>Conectamos tus sueños con las mejores propiedades del mercado. Experiencia, confianza y atención personalizada en cada paso.</p>
+        <a href="#contacto" class="btn-principal">Ver Propiedades</a>
+    </section>
+
+    <!-- Contenido de Bienvenida -->
+    <main class="contenido">
+        <h2>Bienvenido a una nueva experiencia inmobiliaria</h2>
+        <p>Usa nuestro asistente en línea para recibir atención inmediata y agendar una cita en minutos.</p>
     </main>
 
-    <script>
-        // Aquí insertaremos el widget de tu agente de IA.
-        // Si el agente captura datos (nombre, presupuesto, zona), los puede mandar directamente a tu CRM o Google Sheets.
-        console.log("Sistema de captación inmobiliaria listo.");
-    </script>
-<script src="//code.tidio.co/lul7ufyijr77syp7toos2fuhm46sywr7.js" async></script>
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Inmobiliaria Canteras. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- AQUÍ PEGAREMOS EL CÓDIGO DE TIDIO MÁS ADELANTE -->
+    <!-- ========================================== -->
+
 </body>
-</html>
+</html>         
