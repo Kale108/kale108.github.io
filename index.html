@@ -66,8 +66,53 @@
             margin: 50px auto;
             padding: 0 20px;
             text-align: center;
-            padding-bottom: 100px; /* Espacio para que no tape el footer */
+            padding-bottom: 100px; 
         }
+        
+        /* ESTILOS NUEVOS PARA EL FORMULARIO */
+        .formulario-contacto {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 40px auto 0 auto;
+            text-align: left;
+        }
+        .formulario-contacto h3 {
+            margin-top: 0;
+            color: #1a365d;
+            text-align: center;
+        }
+        .formulario-contacto label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #4a5568;
+        }
+        .formulario-contacto select, .formulario-contacto input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            box-sizing: border-box; 
+        }
+        .formulario-contacto button {
+            width: 100%;
+            background-color: #1a365d;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .formulario-contacto button:hover {
+            background-color: #2a4365;
+        }
+
         footer {
             background-color: #2d3748;
             color: #a0aec0;
@@ -98,14 +143,63 @@
 
     <main class="contenido">
         <h2>Bienvenido a una nueva experiencia inmobiliaria</h2>
-        <p>Usa nuestro asistente en línea para recibir atención inmediata y agendar una cita en minutos.</p>
-    </main>
+        <p>Completa este breve perfil para recibir atención inmediata y opciones a tu medida.</p>
+
+        <div class="formulario-contacto" id="contacto">
+            <h3>Encuentra tu propiedad ideal</h3>
+            <form id="leadForm">
+              
+              <label for="intencion">¿Qué buscas hacer?</label>
+              <select id="intencion" name="intencion" required>
+                <option value="comprar">Comprar propiedad</option>
+                <option value="invertir">Invertir</option>
+              </select>
+          
+              <label for="presupuesto">Rango de presupuesto:</label>
+              <select id="presupuesto" name="presupuesto" required>
+                <option value="estandar">Estándar</option>
+                <option value="premium">Premium / Lujo</option>
+              </select>
+          
+              <label for="email">¿A qué correo te enviamos las opciones?</label>
+              <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+          
+              <button type="submit">Enviar mi perfil</button>
+            </form>
+          </div>
+          </main>
 
     <footer>
         <p>&copy; 2026 Inmobiliaria Canteras. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="//code.tidio.co/lul7ufyijr77syp7toos2fuhm46sywr7.js" async></script>
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+          e.preventDefault(); 
+      
+          const formData = {
+            intencion: document.getElementById('intencion').value,
+            presupuesto: document.getElementById('presupuesto').value,
+            email: document.getElementById('email').value
+          };
+      
+          // IMPORTANTE: REEMPLAZA ESTA URL CON LA DE TU WEBHOOK EN MAKE
+          const webhookUrl = 'https://hook.us1.make.com/TU_URL_UNICA_AQUI';
+      
+          fetch(webhookUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+          })
+          .then(response => {
+            alert("¡Gracias! Tus datos han sido enviados. Revisa tu correo en unos minutos.");
+            document.getElementById('leadForm').reset(); 
+          })
+          .catch(error => console.error('Error:', error));
+        });
+      </script>
 
 </body>
 </html>
