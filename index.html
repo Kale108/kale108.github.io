@@ -1,24 +1,35 @@
-<div style="max-width: 500px; margin: 50px auto; padding: 30px; border: 1px solid #e0e0e0; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-color: #ffffff; font-family: sans-serif;">
-    <h2 style="text-align: center; color: #333;">Encuentra tu propiedad ideal</h2>
-    
-    <form action="https://hook.us2.make.com/nf6jebhtwtimni6mp3ht55fp12wufsh5" method="POST">
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliaria Canteras</title>
+</head>
+<body style="background-color: #f4f7f6; font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0;">
 
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">¿Qué buscas hacer?</label>
-        <select id="tipo" name="tipo" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
-            <option value="comprar">Comprar propiedad</option>
-        </select>
+    <div style="max-width: 500px; width: 100%; padding: 30px; border: 1px solid #e0e0e0; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-color: #ffffff; box-sizing: border-box;">
+        <h2 style="text-align: center; color: #333; margin-top: 0;">Encuentra tu propiedad ideal</h2>
+        
+        <form action="https://hook.us2.make.com/nf6jebhtwtimni6mp3ht55fp12wufsh5" method="POST">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;">
 
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Rango de presupuesto:</label>
-        <select id="presupuesto" name="presupuesto" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
-            <option value="premium">Premium</option>
-            <option value="estandar">Estándar</option>
-        </select>
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">¿Qué buscas hacer?</label>
+            <select id="tipo" name="tipo" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; box-sizing: border-box;">
+                <option value="comprar">Comprar propiedad</option>
+            </select>
 
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">¿A qué correo te enviamos las opciones?</label>
-        <input type="email" id="email" name="email" placeholder="tu@correo.com" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Rango de presupuesto:</label>
+            <select id="presupuesto" name="presupuesto" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; box-sizing: border-box;">
+                <option value="premium">Premium</option>
+                <option value="estandar">Estándar</option>
+            </select>
 
-        <button type="submit" style="width: 100%; padding: 12px; background-color: #1a365d; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Enviar mi perfil</button>
-    </form>
-</div>
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">¿A qué correo te enviamos las opciones?</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;">
+
+            <button type="submit" style="width: 100%; padding: 12px; background-color: #1a365d; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Enviar mi perfil</button>
+        </form>
+    </div>
+</body>
+</html>
